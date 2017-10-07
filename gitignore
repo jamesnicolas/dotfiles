@@ -1,0 +1,5 @@
+.yardoc
+tmp
+spec_report.html
+doc
+*.DS_Store

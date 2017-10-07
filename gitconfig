@@ -1,0 +1,29 @@
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+  ca = commit -av 
+  mg = merge --no-ff --no-edit
+  lo = log --graph
+  undo = reset --hard
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  amend = commit --amend
+  subup = submodule update --init --recursive
+  l = log --graph --pretty=format:'%C(bold red)%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+[color]
+  ui = auto
+[merge]
+	tool = opendiff
+[difftool]
+  prompt = false
+[branch]
+  autosetupmerge = true
+[help]
+  format = web
+[web]
+  browser=open
+[core]
+  excludesfile = ~/.gitignore
+[user]
+	name = James Nicolas
