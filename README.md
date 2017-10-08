@@ -4,9 +4,10 @@ sync my dot files, also new way to farm commits
 ## Setup
 
 `git clone https://github.com/jamesnicolas/dotfiles.git ~/.dotfiles`
+
 `cd ~/.dotfiles`
+
 `make setup`
-=======
 - `git clone https://github.com/jamesnicolas/dotfiles.git ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `make symlink`
