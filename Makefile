@@ -3,11 +3,13 @@ DOTFILES_DIR := ${HOME}/.dotfiles
 
 .PHONY: help
 
-default: help 
+default: help
 
 help: ## The help message.
 	@printf "Available Targets:\n"
 	@printf "$(MAKEFILE_LIST)\n"
+
+setup: vundle symlink
 
 symlink: ## create the symlinks
 	ln -s "$(DOTFILES_DIR)/bashrc" "${HOME}/.bashrc"
