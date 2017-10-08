@@ -3,10 +3,14 @@ sync my dot files, also new way to farm commits
 
 ## Setup
 
-- clone
-- paste in everything and rename everything with a `.` in front
+`git clone https://github.com/jamesnicolas/dotfiles.git ~/.dotfiles`
+`cd ~/.dotfiles`
+`make symlink`
+`make vundle`
+
+Right now if you already have some of this setup, `make symlink` and `make vundle` might not work. You might have to set up things manually.
 
 ## todo
 
-- automate setup
-- put actual vimrc with plugin setup and stuff
+- make make smoother
+- make for syncing vim plugins

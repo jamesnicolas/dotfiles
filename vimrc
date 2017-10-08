@@ -439,7 +439,6 @@ set noexpandtab
 set nu
 set pastetoggle=<F2>
 
-set listchars=tab:▶\ ,space:.,trail:~,extends:>,precedes:<
 set nolist
 autocmd BufWritePre * %s/\s\+$//e
 
