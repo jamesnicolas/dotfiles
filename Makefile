@@ -24,5 +24,5 @@ vundle: ## since vundle uses git to manage the plugins, we can't include them in
 tmux: ## set up tmux for the first time
 	ln -s "$(DOTFILES_DIR)/tmux.conf" "${HOME}/.tmux.conf"
 	ln -s "$(DOTFILES_DIR)/tmux" "${HOME}/.tmux"
-	git clone https://github.com/tmux-plugins/tpm "$(DOTFILES_DIR)/tmux"
+	git clone https://github.com/tmux-plugins/tpm "$(DOTFILES_DIR)/tmux/plugins/tpm"
 	tmux source "${HOME}/.tmux.conf"
