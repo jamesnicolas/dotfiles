@@ -1,3 +1,4 @@
+
 # get current branch in git repo
 function parse_git_branch() {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -24,7 +25,7 @@ function parse_git_dirty {
 		bits=">${bits}"
 	fi
 	if [ "${ahead}" == "0" ]; then
-		bits="*${bits}"
+		bits="&${bits}"
 	fi
 	if [ "${newfile}" == "0" ]; then
 		bits="+${bits}"
@@ -36,7 +37,7 @@ function parse_git_dirty {
 		bits="x${bits}"
 	fi
 	if [ "${dirty}" == "0" ]; then
-		bits="!${bits}"
+		bits="*${bits}"
 	fi
 	if [ ! "${bits}" == "" ]; then
 		echo " ${bits}"
@@ -45,4 +46,4 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\[\e[36m\]\u\[\e[m\]@\[\e[35m\]\h\[\e[m\]\w\\$\`parse_git_branch\` "
+export PS1="\[\e[36m\]\u\[\e[m\]@\[\e[35m\]\h\[\e[m\]\w\[\e[33m\]\`parse_git_branch\`\[\e[m\]\\$ "
