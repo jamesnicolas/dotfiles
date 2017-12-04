@@ -1,19 +1,3 @@
-# dotfiles
-sync my dot files, also new way to farm commits
+# dotfiles (from scratch)
 
-## Setup
-
-`git clone https://github.com/jamesnicolas/dotfiles.git ~/.dotfiles`
-
-`cd ~/.dotfiles`
-
-`make setup`
-
-Right now if you already have some of this setup, `make symlink` and `make vundle` might not work. You might have to set up things manually.
-
-## todo
-
-- make make smoother
-- unify os-specific clipboard settings
-- consistent, readable colours
-- make more scalable
+A lot of this stuff is carried from work. I realized it doesn't work well when trying to move between windows, linux, and mac. I think it would be easier starting from the ground up.

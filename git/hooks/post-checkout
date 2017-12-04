@@ -1,9 +1,0 @@
-#!/bin/bash
-
-submodules=$(git submodule status | grep -v '^ ' | awk '{print $2}')
-
-if [[ -n "${submodules}" ]]; then
-    echo
-    echo 'WARNING! The following submodules are out of sync:'
-    echo ' ' $submodules
-fi
