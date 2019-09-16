@@ -1,5 +1,6 @@
 SHELL := /bin/bash
 DOTFILES_DIR := ${HOME}/.dotfiles
+SYMLINKS := bashrc vim vimrc tmux.conf
 
 .PHONY: help
 
@@ -12,9 +13,7 @@ help: ## The help message.
 setup: symlink
 
 symlink: ## create the symlinks
-ifeq ("",$(wildcard ${HOME}/.bashrc))
-	ln -s "$(DOTFILES_DIR)/bashrc" "${HOME}/.bashrc"
-else
-	mv ${HOME}/.bashrc ${HOME}/._bashrc
-	ln -s "$(DOTFILES_DIR)/bashrc" "${HOME}/.bashrc"
-endif
+	for i in $(SYMLINKS); do \
+		mv -f ${HOME}/.$$i ${HOME}/._$$i ; \
+		ln -s "$(DOTFILES_DIR)/$$i" "${HOME}/.$$i" ; \
+	done
