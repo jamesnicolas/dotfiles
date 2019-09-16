@@ -47,5 +47,3 @@ function parse_git_dirty {
 }
 
 export PS1="\[\e[36m\]\u\[\e[m\]@\[\e[35m\]\h\[\e[m\]\w\[\e[33m\]\`parse_git_branch\`\[\e[m\]\\$ "
-
-alias scs246='ssh -t jenicola@linux.student.cs.uwaterloo.ca "cd ~/cs246/1181 ; exec \$SHELL -l"'
