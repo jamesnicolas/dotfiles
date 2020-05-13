@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-DOTFILES_DIR := ${HOME}/.dotfiles
+DOTFILES_DIR := ${HOME}/dotfiles
 SYMLINKS := bashrc vim vimrc tmux.conf
 
 .PHONY: help
