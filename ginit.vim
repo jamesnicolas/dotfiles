@@ -1,3 +1,3 @@
 set mouse=a
 
-"set guifont=Cica:h12
+set guifont=Comic Mono:h12
